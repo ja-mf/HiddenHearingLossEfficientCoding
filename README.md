@@ -16,9 +16,9 @@ pip install -r requirements.txt
 
 All commands are driven by the `Makefile`. Adjust parallelism for heavy steps with `NJOBS`, for example `make bootstrap NJOBS=30`.
 
-## Fast track: reproduce from shipped artifacts
+## Reproduce from processed data
 
-This path uses the shipped artifacts and does not require downloading the raw recordings.
+This path uses processed data in this repo and does not require downloading the raw recordings.
 
 ```bash
 make tables    # regenerate data/derived/tables/ from shipped artifacts
@@ -30,7 +30,7 @@ The prior grid `df_mi_pdf.parquet` is derived and not tracked directly. If absen
 
 Canonical table outputs use the 3000-replicate bootstrap files. The `*_bootstrap_5000.parquet` files in `data/artifacts/` are included as additional sensitivity artifacts and are not used by `make tables`.
 
-## Heavy track: regenerate artifacts from raw recordings
+## Reproduce from original spike trains
 
 Download and extract the raw data archive from Zenodo:
 
