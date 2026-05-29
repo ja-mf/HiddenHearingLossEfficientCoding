@@ -1,4 +1,4 @@
-# Efficient coding explains altered neural representations elicited by subtle sensory lesions
+# Code for manuscript "Efficient coding characterizes altered neural representations elicited by subtle sensory lesions"
 
 Code and artifacts to reproduce the figures and statistical tables for the associated analysis.
 
