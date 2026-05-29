@@ -1,0 +1,58 @@
+
+=== Table S1: Empirical LME (per-family BH-corrected) ==========================================
+ID     Claim                                        Statistic                      p_raw    p_BH  flag
+E8     Threshold x HPR (EP vs SH)                   chi2=17.94, df=4               0.001   0.004  **
+E9     Threshold x HPR (EP vs NE)                   chi2=15.43, df=4               0.004   0.006  **
+E1     Gain x HPR (NE vs SH)                        chi2=16.66, df=4               0.002   0.009  **
+E_SP1  Gain deviation x HPR (NE vs SH)              chi2=10.03, df=4               0.040   0.040  **
+E_SR1  Spontaneous rate x HPR (NE vs SH)            chi2=11.26, df=4               0.024   0.048  **
+E10    Threshold x HPR (PP vs SH)                   chi2=9.42, df=4                0.051   0.051  *
+E_SP2  Threshold deviation x HPR (NE vs SH)         chi2=10.66, df=4               0.031   0.061  *
+E_SR2  Spontaneous rate EP vs PP (all HPRs)         beta=-0.4691, SE=0.2791        0.093   0.464  
+E_DR1  Dynamic range x HPR (NE vs SH)               chi2=3.05, df=4                0.549   0.824  
+E_FI2  log(FI_24-50dB) at HPR30 (NE vs SH)          beta=-0.3715, SE=0.3417        0.277   0.831  
+E3     sigma_Unif NE < SH (exploratory)             beta=1.1268, SE=6.9624         0.871   0.871  exp
+E6     Spike rate EP > PP (within-subject)          beta=-0.1790, SE=0.2939        0.542   0.904  
+E4     Threshold x HPR (NE vs SH)                   chi2=2.25, df=4                0.690   0.920  
+E_FI1  log(total_FI) x HPR (NE vs SH)               chi2=0.64, df=4                0.959   0.959  
+E_FI3  log(total_FI) x HPR (EP vs PP)               chi2=0.34, df=4                0.987   0.987  
+E5     Threshold EP > PP (within-subject)           beta=-0.8306, SE=1.0552        0.431   1.000  
+E7     Gain x HPR (EP vs PP)                        chi2=0.67, df=4                0.955   1.000  
+
+=== Table S2: Optimization-prior contrasts (3000 hierarchical bootstrap reps) ==================
+ID    Contrast                      HPR Population        Median  95% CI                  Pr_dir
+TX1   Utility transition 30->45      45 All units          +0.21  [-0.03, +0.45]         0.961**
+HH1   Entropy (SH-NE)                30 All units          +0.24  [-0.02, +0.50]         0.959**
+HE1   Utility (SH-NE)                30 Low-threshold      -0.22  [-0.51, +0.03]         0.956**
+TX2   Utility transition 30->60      60 All units          +0.29  [-0.05, +0.63]         0.953**
+HD1   Utility (SH-NE)                30 All units          -0.23  [-0.53, +0.04]         0.953**
+HF1   Mean FR (SH-NE)                30 All units          +0.09  [-0.02, +0.23]          0.946*
+TX3   Utility transition 30->75      75 All units          +0.25  [-0.05, +0.60]          0.942*
+TX4   Utility transition 30->90      90 All units          +0.21  [-0.09, +0.58]          0.909*
+S5    Utility (SH-NE)                90 High-threshold     +0.14  [-0.09, +0.39]          0.873*
+HE4   Utility (SH-NE)                75 Low-threshold      -0.08  [-0.21, +0.09]           0.832
+HF5   Mean FR (SH-NE)                90 All units          -0.04  [-0.12, +0.00]           0.824
+HH2   Entropy (SH-NE)                45 All units          +0.09  [-0.13, +0.32]           0.787
+HH4   Entropy (SH-NE)                75 All units          +0.06  [-0.10, +0.20]           0.772
+HE6   Utility (SH-NE)                90 Low-threshold      -0.08  [-0.25, +0.13]           0.765
+HH5   Entropy (SH-NE)                90 All units          +0.03  [-0.09, +0.16]           0.712
+HE5   Degree of divergence           60 Stratified         +0.05  [-0.21, +0.30]           0.644
+HE2   Utility (SH-NE)                45 Low-threshold      -0.03  [-0.21, +0.15]           0.644
+S1    Utility (SH-NE)                30 High-threshold     -0.05  [-0.29, +0.14]           0.640
+HF2   Mean FR (SH-NE)                45 All units          +0.01  [-0.08, +0.12]           0.605
+S3    Utility (SH-NE)                60 High-threshold     +0.01  [-0.18, +0.20]           0.427
+HH3   Entropy (SH-NE)                60 All units          -0.01  [-0.15, +0.13]           0.423
+S2    Utility (SH-NE)                45 High-threshold     +0.02  [-0.15, +0.15]           0.361
+HF3   Mean FR (SH-NE)                60 All units          -0.03  [-0.14, +0.09]           0.340
+S4    Utility (SH-NE)                75 High-threshold     +0.04  [-0.12, +0.20]           0.292
+HE3   Utility (SH-NE)                60 Low-threshold      +0.06  [-0.12, +0.24]           0.248
+HF4   Mean FR (SH-NE)                75 All units          -0.06  [-0.17, +0.06]           0.167
+
+=== Table S3: Threshold-quintile Pr(NE > SH) on normalized utility =============================
+Bin (dB SPL)     n NE/SH  HPR 30 HPR 45 HPR 60 HPR 75 HPR 90
+24--54        92/144      0.878    0.631    0.578    0.390    0.557   
+54--61        127/108      0.949    0.959**  0.258    0.764    0.835   
+61--72        118/117      0.988**  0.906    0.753    0.914    0.298   
+72--89        88/147      0.914    0.831    0.858    0.759    0.738   
+89--96        125/111      0.517    0.272    0.364    0.253    0.119   
+

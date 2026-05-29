@@ -1,0 +1,20 @@
+[project]
+name = "HiddenHearingLossEfficientCoding"
+version = "1.0"
+description = "Reproducibility code for the HHL/CHL efficient-coding analysis"
+requires-python = ">=3.13"
+dependencies = [
+  "numpy",
+  "pandas",
+  "scipy",
+  "statsmodels",
+  "matplotlib",
+  "seaborn",
+  "pyarrow",
+  "pyyaml",
+  "joblib",
+  "numba",
+  "scikit-learn"
+]
+
+[tool.setuptools]

@@ -1,0 +1,68 @@
+intensity_levels_db:
+- 24
+- 27
+- 30
+- 33
+- 36
+- 39
+- 42
+- 45
+- 48
+- 51
+- 54
+- 57
+- 60
+- 63
+- 66
+- 69
+- 72
+- 75
+- 78
+- 81
+- 84
+- 87
+- 90
+- 93
+- 96
+hpr_centers_db:
+- 30
+- 45
+- 60
+- 75
+- 90
+uniform_hpr_code: -1
+sigmoid_grid:
+  threshold_db_min: 24
+  threshold_db_max: 96
+  threshold_step_db: 3
+  gain_min: -0.5
+  gain_max: 0.5
+  gain_levels: 25
+quality_filter:
+  max_mean_mse: 0.08
+bootstrap:
+  n_iter: 3000
+  n_replicates: 3000
+  sample_size_hhl: 45
+  sample_size_chl: 30
+  hhl_sample_size: 45
+  chl_sample_size: 30
+  mode: hierarchical_animal_balanced
+  seed: 42
+  # Two-population split: per-neuron median adapted threshold over ALL HPRs
+  # (including the uniform -1 condition); low < threshold_split_db, high >=.
+  # 85 dB SPL = upper third of the tested 24-96 dB range. Localizes the
+  # quiet-context NE>SH utility advantage to low(<85) and the deafferentation
+  # signature to high(>=85). Previous value 70 was a midrange split.
+  threshold_split_db: 85
+mi_grid:
+  n_draws: 40000
+  seed: 11 
+  beta_max: 6.0
+  xi_max: 6.0
+  n_beta: 100
+  n_xi: 100
+parallel:
+  n_jobs: 30
+hhl_empirical_exclusions:
+- SH1
